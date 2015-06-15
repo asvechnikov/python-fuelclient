@@ -80,6 +80,4 @@ class TestNodeCommand(test_engine.BaseCLITest):
         self.exec_command(args)
 
         self.m_get_client.assert_called_once_with('node', mock.ANY)
-        self.m_client.node_vms_create.assert_called_once_with(
-            node_id,
-            config)
+        self.m_client.node_vms_create.assert_called_once_with(node_id, config)

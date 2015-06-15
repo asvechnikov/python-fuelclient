@@ -271,4 +271,4 @@ class EnvProvision(EnvMixIn, base.BaseCommand):
         return parser
 
     def take_action(self, parsed_args):
-        return self.client.env_provision()
+        return self.client.env_provision(parsed_args.id)
